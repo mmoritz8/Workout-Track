@@ -1,10 +1,7 @@
 const express = require("express")
 const router = express.Router();
 const mongoose = require('mongoose');
-const mongod = require('mongo');
 const path = require("path");
-var Workout = require("../models/fitnessModels")
-
 
 router.get("/exercise", (req, res) => {
     res
@@ -18,7 +15,7 @@ router.get("/stats", (req, res) => {
         .sendFile(path.join("../public/stats.html"));
 });
 
-router.get("/api/workouts", (req, res) => {
+router.get("/workouts", (req, res) => {
     Workout.find({})
         .then(dbWorkout => {
             res.json(dbWorkout);
@@ -28,7 +25,7 @@ router.get("/api/workouts", (req, res) => {
         });
 });
 
-router.get("api/workouts/:id", (req, res) => {
+router.get("/api/workouts/:id", (req, res) => {
     let query = req.params.id;
     Workout.find({
         request: query

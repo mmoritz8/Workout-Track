@@ -1,10 +1,5 @@
 let mongoose = require("mongoose");
-var Workout = connection.model('Workout', yourSchema);
 
-mongoose.connect("mongodb://localhost/workout", {
-  useNewUrlParser: true,
-  useFindAndModify: false
-});
 
 let workoutSeed = [
   {
