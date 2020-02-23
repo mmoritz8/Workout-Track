@@ -1,0 +1,34 @@
+{
+  "name": "workouttrack",
+  "version": "1.0.0",
+  "description": "This assignment will require you to create Mongo database with a Mongoose schema and handle routes with Express.",
+  "main": "server.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node server.js",
+    "watch": "nodemon server.js",
+    "seed": "node seeders/seed.js"
+  },
+  "author": "madeline",
+  "license": "ISC",
+  "dependencies": {
+    "express": "^4.17.1",
+    "mongod": "^2.0.0",
+    "mongoose": "^5.9.2",
+    "morgan": "^1.9.1",
+    "path": "^0.12.7"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/mmoritz8/Workout-Track.git"
+  },
+  "keywords": [
+    "workout",
+    "nodejs",
+    "mongoose"
+  ],
+  "bugs": {
+    "url": "https://github.com/mmoritz8/Workout-Track/issues"
+  },
+  "homepage": "https://github.com/mmoritz8/Workout-Track#readme"
+}
