@@ -37,7 +37,6 @@ mongoose.connect(process.env.MONGODB_URI || "mongodb://user:001a001a@ds217548.ml
 {
     useMongoClient: true;
 }
-);
 
 app.listen(PORT, () => {
     console.log(`App running on port ${PORT}!`);
