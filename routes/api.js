@@ -1,20 +1,21 @@
 const express = require("express")
 const router = express.Router();
 const mongoose = require('mongoose');
-const mongod = require('mongod');
-const Workout = require("../models/fitnessModels");
+const mongod = require('mongo');
 const path = require("path");
+var Workout = require("../models/fitnessModels")
+
 
 router.get("/exercise", (req, res) => {
     res
         .status(200)
-        .sendFile(path.join("..//public/exercise.html"));
+        .sendFile(path.join("../public/exercise.html"));
 });
 
 router.get("/stats", (req, res) => {
     res
         .status(200)
-        .sendFile(path.join("..//public/stats.html"));
+        .sendFile(path.join("../public/stats.html"));
 });
 
 router.get("/api/workouts", (req, res) => {

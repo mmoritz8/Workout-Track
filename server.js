@@ -7,7 +7,6 @@ const router = express.Router();
 
 const PORT = process.env.PORT || 3000;
 
-const User = require("../models/fitnessModels");
 const app = express();
 
 app.use(logger("dev"));
@@ -17,7 +16,7 @@ app.use(express.json());
 
 app.use(express.static("public"));
 
-mongoose.connect(process.env.MONGODB_URI || "mongodb://localhost/userdb", { useNewUrlParser: true });
+mongoose.connect('mongodb://localhost/gettingstarted', { useNewUrlParser: true });
 
 app.post("/submit", ({ body }, res) => {
     User.create(body)
