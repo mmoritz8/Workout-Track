@@ -1,10 +1,13 @@
 const express = require("express");
 const logger = require("morgan");
 const mongoose = require("mongoose");
+var path = require("path");
+const router = express.Router();
+
 
 const PORT = process.env.PORT || 3000;
 
-const User = require("./fitnessModels.js");
+const User = require("../models/fitnessModels");
 const app = express();
 
 app.use(logger("dev"));
